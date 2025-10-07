@@ -2,6 +2,8 @@ local get_icon = require("helpers.get_icon")
 local settings = require("settings")
 
 local front_app = sbar.add("item", "front_app", {
+  position = "right",
+  padding_right = 100,
   display = "active",
   icon = {
     string = "􀆊",

@@ -21,6 +21,7 @@ local colors_spaces = {
 
 for i = 1, 10, 1 do
   local space = sbar.add("space", "space." .. i, {
+    position = "center",
     space = i,
     icon = {
       font = {
@@ -52,6 +53,7 @@ for i = 1, 10, 1 do
 
   -- Padding space
   sbar.add("space", "space.padding." .. i, {
+    position = "center",
     space = i,
     script = "",
     width = settings.group_paddings,

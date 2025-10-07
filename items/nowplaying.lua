@@ -4,24 +4,25 @@ local get_icon = require("helpers.get_icon")
 local whitelist = { ["Music"] = true, ["网易云音乐"] = true }
 
 local nowplaying = sbar.add("item", "nowplaying", {
-  position = "right",
+  position = "left",
+  padding_left = 100,
   updates = true,
   update_freq = 1,
   icon = {
     font = "sketchybar-app-font:Regular:14.0",
     string = "􀑪 􀊆",
-    color = colors.Catppuccin.Mocha.Rosewater,
-    padding_right = 0,
+    -- color = colors.Catppuccin.Mocha.Rosewater,
+    padding_right = 10,
   },
   label = {
     max_chars = 15,
     align = "center",
     padding_right = 3,
     padding_left = 0,
-    color = colors.Catppuccin.Mocha.Rosewater,
+    -- color = colors.Catppuccin.Mocha.Rosewater,
   },
   background = {
-    color = colors.Catppuccin.Mocha.Base,
+    -- color = colors.Catppuccin.Mocha.Base,
   },
 })
 
@@ -29,9 +30,12 @@ local function update_music_info(env)
   local playing_state = env.INFO.state
   if playing_state == "paused" then
     sbar.animate("tanh", 20, function()
+      -- nowplaying:set({
+      --   icon = "􀑪 􀊆",
+      --   label = "",
+      -- })
       nowplaying:set({
-        icon = "􀑪 􀊆",
-        label = "",
+        drawing = false,
       })
     end)
     return
@@ -57,6 +61,7 @@ local function update_music_info(env)
       label = {
         string = result,
       },
+      drawing = true,
     })
   end)
 end
