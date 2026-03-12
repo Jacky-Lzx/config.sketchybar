@@ -4,7 +4,9 @@ local colors = require("colors")
 -- Equivalent to the --default domain
 sbar.default({
   update_freq = 1,
-  updates = "when_shown",
+
+  -- updates = "when_shown",
+  updates = "true",
 
   icon = {
     font = {
