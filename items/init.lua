@@ -1,8 +1,7 @@
 -- left
 -- require("items.apple_icon")
 -- require("items.menus")
--- require("items.spaces")
-require("items.aerospace")
+require("items.spaces")
 require("items.front_app")
 
 -- right
