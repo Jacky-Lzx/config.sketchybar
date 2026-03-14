@@ -14,6 +14,7 @@ local nowplaying = sbar.add("item", "nowplaying", {
     -- color = colors.Catppuccin.Mocha.Rosewater,
     padding_right = 10,
   },
+
   label = {
     max_chars = 15,
     align = "center",
@@ -22,7 +23,7 @@ local nowplaying = sbar.add("item", "nowplaying", {
     -- color = colors.Catppuccin.Mocha.Rosewater,
   },
   background = {
-    -- color = colors.Catppuccin.Mocha.Base,
+    color = colors.Catppuccin.Mocha.Base,
   },
 })
 

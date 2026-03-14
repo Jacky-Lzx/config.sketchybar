@@ -1,5 +1,6 @@
 local get_icon = require("helpers.get_icon")
 local settings = require("settings")
+local colors = require("colors")
 
 local front_app = sbar.add("item", "front_app", {
   position = "right",
@@ -9,6 +10,9 @@ local front_app = sbar.add("item", "front_app", {
     string = "􀆊",
     padding_right = 10,
     font = "sketchybar-app-font:Regular:14.0",
+  },
+  background = {
+    color = colors.Catppuccin.Mocha.Base,
   },
   label = {
     font = {
