@@ -26,7 +26,7 @@ front_app:subscribe("front_app_switched", function(env)
   local app = env.INFO
   local icon = get_icon(app)
 
-  front_app:set({ icon = { string = "" }, label = { string = "" } })
+  -- front_app:set({ icon = { string = "" }, label = { string = "" } })
   sbar.animate("tanh", 10, function()
     front_app:set({ icon = { string = icon }, label = { string = env.INFO } })
   end)
